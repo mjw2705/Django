@@ -1,6 +1,6 @@
 FROM python:3.8
 
-COPY requirements.txt /dog_demo/requirements.txt
+COPY ./requirements.txt /dog_demo/requirements.txt
 
 WORKDIR /dog_demo
 

@@ -1,5 +1,3 @@
-33 lines (29 sloc)  492 Bytes
-
 version: "3"
 
 networks:
@@ -15,11 +13,9 @@ services:
     build: ./Django-web 
     ports:
       - "8100:8000"
-    depends_on:
-      - postgres
     volumes:
       - ./Django-web:/dog_demo
     networks:
       - backend
     env_file: .env
-    command: './runserver.sh'
+    command: "python manage.py runserver 0.0.0.0:8000"

@@ -1,3 +1,3 @@
-docker-compose build Django-web
-docker-compose kill Django-web
-docker-compose up -d Django-web
+docker-compose build web
+docker-compose kill web
+docker-compose up -d web
