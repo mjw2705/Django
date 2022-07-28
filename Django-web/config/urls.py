@@ -16,9 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from django.conf import settings 
+from django.conf.urls.static import static
+
 from webapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
+    path('', views.imageUpload),
+    path('', views.random_test)
 ]
+
+# 이미지 파일을 업로드 하기 위한 설정
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
